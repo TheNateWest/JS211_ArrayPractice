@@ -30,7 +30,7 @@ console.log(`8.Sorted cars are ${sortedReversedCars}`);
 console.log(sortedReversedCars);
 
 
-const pets = ['dog', 'cat', 'fish', 'rabbit', 'snake', 'lizard', 'bird']
+let pets = ['dog', 'cat', 'fish', 'rabbit', 'snake', 'lizard', 'bird']
 console.log(`9. Pets are ${pets}`);
 console.log(pets);
 
@@ -38,28 +38,40 @@ let reptiles = pets.slice(4, 6);
 console.log(`10. Reptiles are ${reptiles}`);
 console.log(reptiles);
 
-let removedReptiles = pets.slice(4, 5);
+let removedReptiles = pets.splice(4, 2, 'hamster');
 console.log(`11. Pets without reptiles are ${removedReptiles}`);
 console.log(removedReptiles);
+console.log(pets);
 
-// let removedPet = pets.pop("")
-// console.log('12. Take away the last pet is ${removedPet}');
+let removedPet = pets.pop("")
+console.log(`12. Take away the last pet is ${removedPet}`);
+console.log(removedPet);
+console.log(pets);
 
-// pets.push(removedPet)
+let returnPet = pets.push(removedPet)
+console.log(`13. Added back to Array is ${returnPet}`);
+console.log(pets);
 
-// pets.shift(0)
+let removeFirst = pets.shift(0)
+console.log(`14. Removing the first item is ${removeFirst}`);
+console.log(pets);
 
-// pets.unshift('turtle')
+let addTurtle = pets.unshift('turtle')
+console.log(`15. Adding turtle is ${addTurtle}`);
+console.log(pets);
 
-// const numbers = [23, 45, 0, 2, 8, 44, 100, 1, 3, 91, 34]
 
-// function addTwo(num, index, arr) {
-//     arr[index] = num + 2;
-// }
 
-// numbers.forEach(addTwo)
 
-// console.log(numbers)
+const numbers = [23, 45, 0, 2, 8, 44, 100, 1, 3, 91, 34]
+
+function addTwo(num, index, arr) {
+    arr[index] = num + 2;
+}
+
+numbers.forEach(addTwo)
+console.log(numbers)
+
 
 
 
